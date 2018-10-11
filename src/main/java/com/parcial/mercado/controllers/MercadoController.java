@@ -30,7 +30,7 @@ public class MercadoController {
     @Autowired
     MercadoService ms;
     
-    @RequestMapping(value ="/intradat",method = RequestMethod.GET)        
+    @RequestMapping(value ="/Intradat",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetIntradat(){
  	try { 			
             return new ResponseEntity<>(ms.timeSeriesIntradat(),HttpStatus.ACCEPTED);
@@ -40,7 +40,7 @@ public class MercadoController {
  	}  
     }  
     
-    @RequestMapping(value ="/day",method = RequestMethod.GET)        
+    @RequestMapping(value ="/Day",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetDay(){
  	try { 			
             return new ResponseEntity<>(ms.timeSeriesDaily(),HttpStatus.ACCEPTED);
@@ -50,7 +50,7 @@ public class MercadoController {
  	}  
     }  
     
-    @RequestMapping(value ="/week",method = RequestMethod.GET)        
+    @RequestMapping(value ="/Week",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetWeek(){
  	try { 			
             return new ResponseEntity<>(ms.timeSeriesWeekly(),HttpStatus.ACCEPTED);
@@ -60,7 +60,7 @@ public class MercadoController {
  	}  
     } 
     
-    @RequestMapping(value ="/month",method = RequestMethod.GET)        
+    @RequestMapping(value ="/Month",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetMonth(){
  	try { 			
             return new ResponseEntity<>(ms.timeSeriesMonthly(),HttpStatus.ACCEPTED);
