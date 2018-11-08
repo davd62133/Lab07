@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.parcial.mercado.controllers;
+package com.mercado.controllers;
 
-import com.parcial.mercado.services.MercadoService;
+import com.mercado.services.MercadoService;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

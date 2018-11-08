@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.parcial.mercado.services.impl;
+package com.mercado.services.impl;
 
-import com.parcial.mercado.services.MercadoService;
+import com.mercado.mongodb.SerieRepository;
+import com.mercado.services.MercadoService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,17 +17,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
  *
  * @author 2123162
  */
-@Service
+//@Service
 public class AlphaVantage implements MercadoService{
     
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final String GET_URL = "https://www.alphavantage.co/query?function=";
+    
+    
     
 
     @Override
