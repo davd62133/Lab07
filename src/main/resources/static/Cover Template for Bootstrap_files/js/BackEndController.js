@@ -1,4 +1,5 @@
-var host = 'http://localhost:8080/mercado/';
+//var host = 'http://localhost:8080/mercado/';
+var host = 'https://lab7arswdavid.herokuapp.com/mercado'
 
 async function getSeries(tiempo){
 	Series.resetAll();
