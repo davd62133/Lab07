@@ -42,7 +42,8 @@ public class MercadoController {
     
     @RequestMapping(value ="/Day",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetDay(){
- 	try { 			
+ 	try {
+            System.out.println(ms.timeSeriesDaily());
             return new ResponseEntity<>(ms.timeSeriesDaily(),HttpStatus.ACCEPTED);
  	} catch (Exception ex) {
             Logger.getLogger(MercadoController.class.getName()).log(Level.SEVERE, null, ex);
@@ -52,7 +53,8 @@ public class MercadoController {
     
     @RequestMapping(value ="/Week",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetWeek(){
- 	try { 			
+ 	try { 
+            System.out.println(ms.timeSeriesWeekly());
             return new ResponseEntity<>(ms.timeSeriesWeekly(),HttpStatus.ACCEPTED);
  	} catch (Exception ex) {
             Logger.getLogger(MercadoController.class.getName()).log(Level.SEVERE, null, ex);
@@ -63,6 +65,7 @@ public class MercadoController {
     @RequestMapping(value ="/Month",method = RequestMethod.GET)        
     public ResponseEntity<?> manejadorGetMonth(){
  	try { 			
+            System.out.println(ms.timeSeriesMonthly());
             return new ResponseEntity<>(ms.timeSeriesMonthly(),HttpStatus.ACCEPTED);
  	} catch (Exception ex) {
             Logger.getLogger(MercadoController.class.getName()).log(Level.SEVERE, null, ex);

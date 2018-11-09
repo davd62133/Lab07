@@ -1,3 +1,5 @@
+var host = 'http://localhost:8080/mercado/';
+
 async function getSeries(tiempo){
 	Series.resetAll();
 	console.log(tiempo);
@@ -17,7 +19,7 @@ async function getSeries(tiempo){
 }
 
 async function getDay(tiempo){
-	await Promise.resolve(axios.get('http://localhost:8080/mercado/'+tiempo)
+	await Promise.resolve(axios.get(host+tiempo)
 	.then(async function (response){
 		var i = 0;		
 		var data = response.data["Time Series (Daily)"];		
@@ -30,7 +32,7 @@ async function getDay(tiempo){
 }
 
 async function getIntradat(tiempo){
-	await Promise.resolve(axios.get('http://localhost:8080/mercado/'+tiempo)
+	await Promise.resolve(axios.get(host+tiempo)
 	.then(async function (response){
 		var i = 0;		
 		var data = response.data["Time Series (5min)"];		
@@ -43,7 +45,7 @@ async function getIntradat(tiempo){
 }
 
 async function getWeek(tiempo){
-	await Promise.resolve(axios.get('http://localhost:8080/mercado/'+tiempo)
+	await Promise.resolve(axios.get(host+tiempo)
 	.then(async function (response){
 		var i = 0;		
 		var data = response.data["Weekly Time Series"];		
@@ -56,7 +58,7 @@ async function getWeek(tiempo){
 }
 
 async function getMonth(tiempo){
-	await Promise.resolve(axios.get('http://localhost:8080/mercado/'+tiempo)
+	await Promise.resolve(axios.get(host+tiempo)
 	.then(async function (response){
 		var i = 0;		
 		var data = response.data["Monthly Time Series"];		
